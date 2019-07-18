@@ -1,0 +1,12 @@
+ls=[]
+n=int(input("Enter size of list"))
+for i in range(n):
+    m=int(input("Enter values"))
+    ls.append(m)
+for i in range(len(ls)-1,0,-1):
+    for j in range(i):
+        if ls[j]>ls[j+1]:
+            temp=ls[j]
+            ls[j]=ls[j+1]
+            ls[j+1]=temp
+print(ls)
